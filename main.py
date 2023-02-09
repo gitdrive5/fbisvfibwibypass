@@ -32,10 +32,9 @@ bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     bot.reply_to(message, "<b>Hello</b>\n\n  \
-I am Link Bypasser Bot. I can Bypass Link For You and Get Original Link. \
-
-Simply Send Me a Valid Link and Get Original Link. \
-try /about information this bot  \
+I am Link Bypasser Bot. I can Bypass Link For You and Get Original Link.\n \
+Simply Send Me a Valid Link and Get Original Link.\n \
+try /about information this bot.\n  \
 _Use command /help to check valid link_",
 parse_mode="Markdown")
 
