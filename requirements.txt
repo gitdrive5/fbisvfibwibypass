@@ -6,3 +6,6 @@ pyTelegramBotAPI
 lxml
 lk21
 cfscrape
+psutil
+flask
+gunicorn
