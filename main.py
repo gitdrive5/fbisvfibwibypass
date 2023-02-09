@@ -31,30 +31,12 @@ bot = telebot.TeleBot(TOKEN)
 # start
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "🔗 *Available Sites* \n\n  \
- `/dl` - _direct download link (/ddllist)_ \n  \
- `/af` - _adfly_ \n  \
- `/gp` - _gplinks_ \n  \
- `/dp` - _droplink_ \n  \
- `/lv` - _linkvertise_ \n  \
- `/rl` - _rocklinks_ \n  \
- `/gd` - _gdrive look-alike (/gdlist)_ \n  \
- `/ot` - _others (/otlist)_ \n  \
- `/ou` - _ouo_ \n  \
- `/gt` - _gdtot_ \n  \
- `/sh` - _sharer_ \n  \
- `/ps` - _psa_ \n  \
- `/st` - _shorte_ \n  \
- `/pi` - _pixl_ \n  \
- `/gy` - _gyanilinks_ \n  \
- `/sg` - _shortingly_ \n  \
- `/su` - _shareus_ \n  \
- `/fc` - _filecrypt_ \n  \
- `/ko` - _kolop_ \n  \
- `/df` - _drivefire_ \n  \
- `/hd` - _hubdrive_ \n  \
- `/kd` - _katdrive_ \n\n\
-_reply to the link with command or use format /xx link_",
+    bot.reply_to(message, "<b>Hello</b>\n\n  \
+I am Link Bypasser Bot. I can Bypass Link For You and Get Original Link. \
+
+Simply Send Me a Valid Link and Get Original Link. \
+try /about information this bot  \
+_Use command /help to check valid link_",
 parse_mode="Markdown")
 
 
@@ -497,7 +479,52 @@ def otlis(message):
 - t.co \n\
 - tinyurl.com
     _"""
-    bot.reply_to(message, list, parse_mode="Markdown")       
+    bot.reply_to(message, list, parse_mode="Markdown")
+    
+#about command
+@bot.message_handler(commands=['about'])
+def otlis(message):
+    list="""_<b>
+╭────────────────────⍟
+├🤖 The Name is : Bypass Bot
+├✏️ LANGUAGE : Python 3 (https://www.python.org/)
+├🌀 𝚂𝙴𝚁𝚅𝙴𝚁 : Local
+├📊 BUILD-STATUS : Python v1.0               
+╰─────────────────────⍟</b>
+    _"""
+    bot.reply_to(message, list, parse_mode="Markdown")
+    
+# help commands
+@bot.message_handler(commands=['help'])
+def otlis(message):
+    list="""
+🔗Available Site Command:-\n
+/ddllist - DDL supported sites.\n
+/gdlist - Gdrive look-alike sites.\n
+/otlist - Others supported sites.\n\n\n
+🔗 *Available Sites* \n\n
+/af - _adfly_ \n  \
+/gp - _gplinks_ \n  \
+/dp - _droplink_ \n  \
+/lv - _linkvertise_ \n  \
+/rl - _rocklinks_ \n  \
+/ou - _ouo_ \n  \
+/gt - _gdtot_ \n  \
+/sh - _sharer_ \n  \
+/ps - _psa_ \n  \
+/st - _shorte_ \n  \
+/pi - _pixl_ \n  \
+/gy - _gyanilinks_ \n  \
+/sg - _shortingly_ \n  \
+/su - _shareus_ \n  \
+/fc - _filecrypt_ \n  \
+/ko - _kolop_ \n  \
+/df - _drivefire_ \n  \
+/hd - _hubdrive_ \n  \
+/kd - _katdrive_ \n\n\
+reply to the link with command or use format /xx link
+    _"""
+    bot.reply_to(message, list, parse_mode="Markdown") 
 
 
 # ddl list
